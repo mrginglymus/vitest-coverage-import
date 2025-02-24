@@ -1,0 +1,9 @@
+{
+  "name": "vitest-coverage-import-example",
+  "exports": {
+    ".": "./index.js"
+  },
+  "imports": {
+    "#*": "./*.js"
+  }
+}
