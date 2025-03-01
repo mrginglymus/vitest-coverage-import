@@ -1,15 +1,23 @@
 import {defineConfig} from "vitest/config";
 
 export default defineConfig({
+  root: 'tests',
   resolve: {conditions: ['xxx']},
+  ssr: {
+    // resolve: {conditions:['xxx']}
+  },
   test: {
-    coverage: {
-      enabled: true,
-      provider: 'istanbul',
-      all: true,
-      include: [
-        "packages/**/*.ts",
+    root: '.',
+    include: ['tests/**/*'],
+    browser: {
+      enabled: false,
+      headless: true,
+      instances: [
+        {
+          browser: "chromium",
+        },
       ],
-    },
+      provider: "playwright",
+    }
   }
 })
