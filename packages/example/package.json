@@ -1,5 +1,12 @@
 {
     "name": "vitest-coverage-import-example",
+    "imports": {
+        "#*": {
+            "xxx": "./*.ts",
+            "types": "./dist/*.d.ts",
+            "default": "./dist/*.js"
+        }
+    },
     "exports": {
         ".": {
             "xxx": "./index.ts",

@@ -9,8 +9,16 @@ export default defineConfig({
   test: {
     root: '.',
     include: ['tests/**/*'],
+    coverage: {
+      enabled: true,
+      provider: 'istanbul',
+      all: true,
+      include: [
+        "packages/**/*.ts",
+      ],
+    },
     browser: {
-      enabled: false,
+      enabled: true,
       headless: true,
       instances: [
         {
